@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nick Vidnovic for Westwood School Committee</title>
+<meta name="description" content="Expect More from Westwood Schools. Nick Vidnovic for School Committee — April 28, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2C3E50;
+  line-height: 1.7;
+  background: #FFFFFF;
+}
+h1, h2, h3, h4 { font-family: 'Merriweather', Georgia, serif; line-height: 1.3; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* === Colors === */
+:root {
+  --green: #355E3B;
+  --green-dark: #2A4C30;
+  --green-light: #4A7C52;
+  --green-pale: #E8F0E9;
+  --gold: #C5972C;
+  --gold-light: #F5ECD7;
+  --white: #FFFFFF;
+  --off-white: #F8F9FA;
+  --text: #2C3E50;
+  --text-light: #5A6C7E;
+  --text-muted: #8A9AAC;
+}
+
+/* === Layout === */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* === Navigation === */
+.nav {
+  background: var(--green-dark);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.nav-brand {
+  color: var(--white);
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.nav-links { display: flex; gap: 8px; align-items: center; }
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+.nav-links a.active { color: var(--white); background: rgba(255,255,255,0.15); }
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+}
+.nav-cta:hover { background: #B8891F !important; }
+
+/* Mobile nav */
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 4px; }
+
+/* === Hero === */
+.hero {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  color: var(--white);
+  padding: 64px 0 56px;
+}
+.hero .hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: center;
+}
+.hero-text { text-align: left; }
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+.hero .subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+.hero .slogan {
+  font-family: 'Merriweather', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.hero .election-date {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.hero-photo {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 4px solid rgba(255,255,255,0.2);
+}
+.hero-photo img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary { background: var(--gold); color: var(--white); }
+.btn-primary:hover { background: #B8891F; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+.btn-green { background: var(--green); color: var(--white); }
+.btn-green:hover { background: var(--green-dark); }
+
+/* === Section Styles === */
+.section { padding: 72px 0; }
+.section-alt { background: var(--off-white); }
+.section-green { background: var(--green-pale); }
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: var(--green-dark);
+  margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+/* === About === */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.about-text p { margin-bottom: 16px; color: var(--text); }
+.about-text p:first-child { font-size: 1.1rem; }
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.about-tag {
+  background: var(--green-pale);
+  color: var(--green-dark);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* === Priorities === */
+.priorities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.priority-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 32px 28px;
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s;
+}
+.priority-card:hover {
+  border-color: var(--green-light);
+  box-shadow: 0 4px 16px rgba(53,94,59,0.1);
+  transform: translateY(-2px);
+}
+.priority-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.priority-card h3 {
+  font-size: 1.15rem;
+  color: var(--green-dark);
+  margin-bottom: 12px;
+}
+.priority-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.priority-card .stat {
+  display: inline-block;
+  background: var(--gold-light);
+  color: #8B6914;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Secondary priorities */
+.secondary-priorities {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid #E2E8F0;
+}
+.secondary-priorities h3 {
+  font-size: 1.1rem;
+  color: var(--green-dark);
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+}
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.secondary-item {
+  padding: 20px;
+  background: var(--off-white);
+  border-radius: 8px;
+  border-left: 3px solid var(--green-light);
+}
+.secondary-item h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 6px;
+}
+.secondary-item p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* === Stats Banner === */
+.stats-banner {
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 48px 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  text-align: center;
+}
+.stat-item .stat-number {
+  font-family: 'Merriweather', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--gold);
+  display: block;
+}
+.stat-item .stat-desc {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* === Survey CTA === */
+.survey-cta {
+  background: var(--green);
+  color: var(--white);
+  padding: 56px 0;
+  text-align: center;
+}
+.survey-cta h2 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 12px;
+}
+.survey-cta p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+
+/* === Donate === */
+.donate-section { text-align: center; }
+.donate-section .section-subtitle { margin-left: auto; margin-right: auto; }
+.donate-box {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--green-pale);
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid rgba(53,94,59,0.2);
+}
+.donate-box p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+/* === Footer === */
+.footer {
+  background: #1A2E20;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.footer h4 {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+.footer p { font-size: 0.9rem; line-height: 1.6; }
+.footer a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+.footer a:hover { color: var(--gold); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-size: 0.9rem; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.footer-bottom a { color: var(--gold); }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--green-dark);
+    padding: 16px;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .nav-toggle { display: block; }
+  .hero { padding: 48px 0 40px; }
+  .hero .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-text { text-align: center; }
+  .hero-photo { max-width: 340px; margin: 0 auto; }
+  .hero-photo img { height: 280px; }
+  .hero-buttons { justify-content: center; }
+  .priorities-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Nick Vidnovic</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#priorities">Priorities</a>
+      <a href="data.html">The Data</a>
+      <a href="#survey">Survey</a>
+      <a href="support.html" class="nav-cta">Add My Support</a>
+      <a href="#donate" class="nav-cta">Donate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Nick Vidnovic</h1>
+        <p class="subtitle">for Westwood School Committee</p>
+        <p class="slogan">"Expect More from Westwood Schools."</p>
+        <div class="election-date">Vote Tuesday, April 28, 2026</div>
+        <div class="hero-buttons">
+          <a href="support.html" class="btn btn-primary">Add My Support</a>
+          <a href="#donate" class="btn btn-outline">Donate</a>
+          <a href="#survey" class="btn btn-outline">Take the Parent Survey</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="NV Fam.jpg" alt="Nick Vidnovic with his children">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container">
+    <span class="section-label">About Nick</span>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I grew up in a town a lot like Westwood &mdash; where strong public schools, town sports, and a real sense of community set kids up for success. That foundation propelled me to Harvard, to Wharton, and to a career where I now run my own business helping companies grow across the country.</p>
+        <p>Our family moved to Westwood to raise our three children here, and love the people and community in town. Our children have attended Hanlon / Pine Hill over the past four years. My wife Amy is a Pediatric Nurse Practitioner and has served on the Pine Hill PTO board for several years. I coach soccer, assistant coach hockey, and have served on the district's Portrait of a Graduate committee. Our family is deeply invested in Westwood's schools.</p>
+        <p>I'm running because I believe we can &mdash; and should &mdash; expect more. I'll bring the same pragmatic, results-driven approach I use every day in business: set clear goals, measure progress, and hold leadership accountable.</p>
+        <div class="about-highlights">
+          <span class="about-tag">Harvard &amp; Wharton Grad</span>
+          <span class="about-tag">Business Owner</span>
+          <span class="about-tag">Pine Hill Parent</span>
+          <span class="about-tag">Soccer Coach</span>
+          <span class="about-tag">Hockey Asst. Coach</span>
+          <span class="about-tag">Portrait of a Graduate Committee</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Banner -->
+<div class="stats-banner">
+  <div class="container">
+    <p style="text-align:center;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;opacity:0.7;margin-bottom:24px;">Select parent survey and district performance data</p>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">66%</span>
+        <span class="stat-desc">Grade 7 Math: Only 66% meeting or exceeding standards<sup>*</sup></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3 years</span>
+        <span class="stat-desc">consecutive below-level-services school budgets</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">89%</span>
+        <span class="stat-desc">of surveyed parents say academics should be the #1 priority<sup>&dagger;</sup></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">21%</span>
+        <span class="stat-desc">of surveyed parents say administration is responsive to concerns<sup>&dagger;</sup></span>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-size:0.75rem;opacity:0.6;line-height:1.6;">
+      <sup>*</sup>Peer districts: Wellesley, Needham, Dover-Sherborn, Medfield, Hopkinton, Weston. Source: Spring 2025 MCAS, MA DESE.<br>
+      <sup>&dagger;</sup>Westwood parent survey I conducted in 2024 as part of my service on the district Portrait of a Graduate committee.
+    </p>
+    <div style="text-align:center;margin-top:16px;">
+      <a href="data.html" style="color:var(--gold);font-weight:600;font-size:0.95rem;border-bottom:2px solid var(--gold);padding-bottom:2px;">See all the data &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- Priorities -->
+<section id="priorities" class="section section-alt">
+  <div class="container">
+    <span class="section-label">Platform</span>
+    <h2 class="section-title">Six Priorities for Westwood Schools</h2>
+    <p class="section-subtitle">I'm not running to tear anything down &mdash; I'm running to raise the bar. Here's where I'll focus.</p>
+
+    <div class="priorities-grid">
+      <div class="priority-card">
+        <div class="priority-number">1</div>
+        <h3>Transparency &amp; Communication</h3>
+        <p>Parents deserve to know what's happening in our schools &mdash; and to be heard before decisions are made, not after. Too many parents feel administration isn't responsive to their concerns. I'll push for annual "State of the Schools" reports with published MCAS peer comparisons, open forums before major policy changes, and real accountability when parents raise concerns. Transparency isn't a nice-to-have &mdash; it's the foundation everything else is built on.</p>
+        <a href="data.html" class="stat" style="text-decoration:none;">See what parents told us &rarr;</a>
+      </div>
+      <div class="priority-card">
+        <div class="priority-number">2</div>
+        <h3>Fund Our Schools</h3>
+        <p>Westwood's schools have been funded below level services for each of the last three years. Our teachers and staff are the backbone of this district, and they need the resources to do their jobs. I pledge to work to achieve a schools budget that preserves or expands funding for teachers &mdash; and I pledge not to support a budget where that commitment isn't met.</p>
+        <a href="data.html" class="stat" style="text-decoration:none;">See the funding data &rarr;</a>
+      </div>
+      <div class="priority-card">
+        <div class="priority-number">3</div>
+        <h3>Raise Math &amp; STEM Standards</h3>
+        <p>Our math scores trail every comparable district. I'll push for a K-8 math curriculum audit, benchmark against top-performing peers, and set measurable goals to close the gap within three years.</p>
+        <a href="data.html" class="stat" style="text-decoration:none;">See the MCAS comparisons &rarr;</a>
+      </div>
+      <div class="priority-card">
+        <div class="priority-number">4</div>
+        <h3>Fix the Middle School</h3>
+        <p>Parents and data both flag the middle school as the weakest link. I'll advocate for a thorough review of curriculum, culture, and the elementary-to-middle transition that's causing scores to drop.</p>
+        <a href="data.html" class="stat" style="text-decoration:none;">See the grade-level data &rarr;</a>
+      </div>
+      <div class="priority-card">
+        <div class="priority-number">5</div>
+        <h3>New Middle School &mdash; On Time, On Budget</h3>
+        <p>I fully support the new middle school building project. But as a business owner, I know big projects need disciplined oversight. I'll ensure it's delivered efficiently at a cost taxpayers can support.</p>
+        <span class="stat">Business rigor for Westwood's biggest investment</span>
+      </div>
+      <div class="priority-card">
+        <div class="priority-number">6</div>
+        <h3>Enrichment for Every Student</h3>
+        <p>Too many kids fall in the "middle" &mdash; not on IEPs, not identified as gifted, but capable of more with the right challenge. I'll push for differentiated instruction and enrichment tracks across subjects.</p>
+        <a href="data.html" class="stat" style="text-decoration:none;">See what parents prioritize &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Secondary Priorities -->
+    <div class="secondary-priorities">
+      <h3>I'll Also Champion:</h3>
+      <div class="secondary-grid">
+        <div class="secondary-item">
+          <h4>Phones Down, Focus Up</h4>
+          <p>The overwhelming majority of parents oppose phone access at school. I'll support and strengthen district-wide phone-free policies.</p>
+        </div>
+        <div class="secondary-item">
+          <h4>Extended Day for Every Family</h4>
+          <p>Eliminate the aftercare lottery. Westwood is a dual-income town &mdash; every family that needs extended day should have access.</p>
+        </div>
+        <div class="secondary-item">
+          <h4>Student Well-Being</h4>
+          <p>Strengthen anti-bullying enforcement, improve school lunch quality, and maintain mental health resources.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Survey CTA -->
+<section id="survey" class="survey-cta">
+  <div class="container">
+    <h2>What Matters Most to You?</h2>
+    <p>I'm listening. Take a 2-minute survey to share your priorities for Westwood schools.</p>
+    <!-- REPLACE: Update this link with your actual Google Form URL -->
+    <a href="https://forms.gle/YOUR_FORM_ID_HERE" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 36px;">Take the Survey</a>
+  </div>
+</section>
+
+<!-- Donate -->
+<section id="donate" class="section donate-section">
+  <div class="container">
+    <span class="section-label">Support the Campaign</span>
+    <h2 class="section-title">Help Raise the Bar</h2>
+    <p class="section-subtitle">Every contribution helps us reach more Westwood families with our message. School Committee campaigns are won through grassroots support.</p>
+    <div class="donate-box">
+      <p>Donations of any size make a difference &mdash; they help pay for lawn signs, door hangers, and voter outreach.</p>
+      <!-- REPLACE: Update this link with your actual Donorbox campaign URL -->
+      <a href="https://donorbox.org/nick-vidnovic-for-westwood-school-committee" target="_blank" class="btn btn-green" style="width: 100%; justify-content: center; font-size: 1.1rem;">Donate via Donorbox</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Nick Vidnovic for School Committee</h4>
+        <p>I grew up in a town like Westwood. Strong public schools gave me every opportunity, and I want to make sure every child in Westwood has the same. Vote April 28, 2026.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Nick</a></li>
+          <li><a href="#priorities">Priorities</a></li>
+          <li><a href="data.html">The Data</a></li>
+          <li><a href="#survey">Parent Survey</a></li>
+          <li><a href="support.html">Add My Support</a></li>
+          <li><a href="#donate">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="footer-links">
+          <!-- REPLACE: Update with actual campaign email -->
+          <li><a href="mailto:nickforwestwood@gmail.com">nickforwestwood@gmail.com</a></li>
+          <!-- REPLACE: Update with actual social links -->
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Paid for by the Committee to Elect Nick Vidnovic. &copy; 2026. <a href="data.html">See the data</a> behind our platform.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

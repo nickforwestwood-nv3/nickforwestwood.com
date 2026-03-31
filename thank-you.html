@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You! | Nick Vidnovic for Westwood School Committee</title>
+<meta name="description" content="Thank you for supporting Nick Vidnovic for Westwood School Committee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2C3E50;
+  line-height: 1.7;
+  background: #FFFFFF;
+}
+h1, h2, h3, h4 { font-family: 'Merriweather', Georgia, serif; line-height: 1.3; }
+a { color: inherit; text-decoration: none; }
+
+:root {
+  --green: #355E3B;
+  --green-dark: #2A4C30;
+  --green-light: #4A7C52;
+  --green-pale: #E8F0E9;
+  --gold: #C5972C;
+  --gold-light: #F5ECD7;
+  --white: #FFFFFF;
+  --off-white: #F8F9FA;
+  --text: #2C3E50;
+  --text-light: #5A6C7E;
+  --text-muted: #8A9AAC;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* === Navigation === */
+.nav {
+  background: var(--green-dark);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.nav-brand {
+  color: var(--white);
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.nav-links { display: flex; gap: 8px; align-items: center; }
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+}
+.nav-cta:hover { background: #B8891F !important; }
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 4px; }
+
+/* === Thank You Content === */
+.thank-you {
+  min-height: calc(100vh - 64px - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  text-align: center;
+}
+.thank-you-inner {
+  max-width: 600px;
+}
+.thank-you-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--green-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  font-size: 2.5rem;
+}
+.thank-you h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--green-dark);
+  margin-bottom: 16px;
+}
+.thank-you .message {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* === Donate Ask === */
+.donate-ask {
+  background: var(--green-pale);
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(53,94,59,0.15);
+}
+.donate-ask h2 {
+  font-size: 1.3rem;
+  color: var(--green-dark);
+  margin-bottom: 12px;
+}
+.donate-ask p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-green { background: var(--green); color: var(--white); }
+.btn-green:hover { background: var(--green-dark); transform: translateY(-1px); }
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid #D1D9E0;
+}
+.btn-outline-dark:hover {
+  border-color: var(--green-light);
+  color: var(--green-dark);
+}
+.donate-btn {
+  font-size: 1.1rem;
+  padding: 16px 36px;
+}
+.back-link {
+  margin-top: 8px;
+}
+
+/* === Footer === */
+.footer {
+  background: #1A2E20;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.footer h4 {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+.footer p { font-size: 0.9rem; line-height: 1.6; }
+.footer a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+.footer a:hover { color: var(--gold); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-size: 0.9rem; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.footer-bottom a { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--green-dark);
+    padding: 16px;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .nav-toggle { display: block; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .donate-ask { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Nick Vidnovic</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#priorities">Priorities</a>
+      <a href="data.html">The Data</a>
+      <a href="index.html#survey">Survey</a>
+      <a href="support.html">Add My Support</a>
+      <a href="https://donorbox.org/nick-vidnovic-for-westwood-school-committee" target="_blank" class="nav-cta">Donate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Thank You Content -->
+<section class="thank-you">
+  <div class="container">
+    <div class="thank-you-inner">
+      <div class="thank-you-icon">&#10003;</div>
+      <h1>Thank You for Your Support!</h1>
+      <p class="message">It means a lot to know that fellow Westwood parents share this vision for our schools. Together, we can raise the bar for every student in our district.</p>
+
+      <div class="donate-ask">
+        <h2>Can You Help Spread the Word?</h2>
+        <p>If you're able, a donation of any size helps me reach more Westwood parents and create the best possible conversation about our schools. Every bit helps &mdash; from lawn signs to door hangers to voter outreach.</p>
+        <a href="https://donorbox.org/nick-vidnovic-for-westwood-school-committee" target="_blank" class="btn btn-green donate-btn">Donate to the Campaign</a>
+      </div>
+
+      <a href="index.html" class="btn btn-outline-dark back-link">&larr; Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Nick Vidnovic for School Committee</h4>
+        <p>I grew up in a town like Westwood. Strong public schools gave me every opportunity, and I want to make sure every child in Westwood has the same. Vote April 28, 2026.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About Nick</a></li>
+          <li><a href="index.html#priorities">Priorities</a></li>
+          <li><a href="data.html">The Data</a></li>
+          <li><a href="index.html#survey">Parent Survey</a></li>
+          <li><a href="https://donorbox.org/nick-vidnovic-for-westwood-school-committee" target="_blank">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:nickforwestwood@gmail.com">nickforwestwood@gmail.com</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Paid for by the Committee to Elect Nick Vidnovic. &copy; 2026. <a href="data.html">See the data</a> behind our platform.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
